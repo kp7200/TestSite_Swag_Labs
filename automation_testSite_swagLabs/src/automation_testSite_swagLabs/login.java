@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 public class login {
 
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 	
 	Funcs funcs = new Funcs();	
 		
@@ -35,7 +34,7 @@ class Funcs {
 			WebElement password = driver.findElement(By.id("password"));
 			WebElement loginBtn = driver.findElement(By.id("login-button"));
 			
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			username.sendKeys(usernames[i]);
 			password.sendKeys("secret_sauce");
 			loginBtn.click();
