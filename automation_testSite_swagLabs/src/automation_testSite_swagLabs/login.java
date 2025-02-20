@@ -14,11 +14,34 @@ public class login {
 	WebDriver driver = new ChromeDriver();
 	driver.get("https://www.saucedemo.com/");
 	
-	funcs.setUname(driver);
+	//funcs.setUname(driver);
+	
+	loginpage login = new loginpage();
+	login.userlogin(driver);
 
+	sidebar side = new sidebar();
+	side.sidebarfunc(driver);
+	
 	Thread.sleep(3000);
 	driver.close();	
 	}
+}
+
+class loginpage {
+	
+	void userlogin(WebDriver driver) {
+		
+		WebElement usernameField = driver.findElement(By.id("user-name"));
+		usernameField.sendKeys("standard_user");
+		
+		WebElement passwordField = driver.findElement(By.id("password"));
+		passwordField.sendKeys("secret_sauce");
+		
+		WebElement loginBtn = driver.findElement(By.id("login-button"));
+		loginBtn.click();
+		
+	}
+	
 }
 
 class Funcs {
