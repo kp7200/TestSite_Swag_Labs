@@ -22,8 +22,11 @@ public class login {
 	sidebar side = new sidebar();
 	side.sidebarfunc(driver);
 	
+	SidebarBtnNav sidebarBtnNav = new SidebarBtnNav();
+	sidebarBtnNav.sidebarBtnNavFunc(driver);
+	
 	Thread.sleep(3000);
-	driver.close();	
+	//driver.close();	
 	}
 }
 
