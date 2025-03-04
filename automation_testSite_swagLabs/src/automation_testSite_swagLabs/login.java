@@ -9,21 +9,25 @@ public class login {
 
 	public static void main(String[] args) throws Exception {
 	
-	Funcs funcs = new Funcs();	
+	//Funcs funcs = new Funcs();	
 		
 	WebDriver driver = new ChromeDriver();
 	driver.get("https://www.saucedemo.com/");
+	driver.manage().window().maximize();
 	
 	//funcs.setUname(driver);
 	
 	loginpage login = new loginpage();
 	login.userlogin(driver);
 
-	sidebar side = new sidebar();
+	Cart cart = new Cart();
+	cart.CheckCart2(driver);
+
+	/*sidebar side = new sidebar();
 	side.sidebarfunc(driver);
 	
 	SidebarBtnNav sidebarBtnNav = new SidebarBtnNav();
-	sidebarBtnNav.sidebarBtnNavFunc(driver);
+	sidebarBtnNav.sidebarBtnNavFunc(driver);*/
 	
 	Thread.sleep(3000);
 	//driver.close();	
