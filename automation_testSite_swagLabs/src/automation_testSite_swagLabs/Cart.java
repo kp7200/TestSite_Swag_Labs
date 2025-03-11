@@ -20,7 +20,7 @@ public class Cart {
         }
         else
         {
-            System.out.println("Cart is not empty");
+            System.out.println("Cart is empty");
         }
     }
 
@@ -54,7 +54,6 @@ public class Cart {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println();
 
-        Thread.sleep(5000);
-        driver.close();
+        
     }    
 }

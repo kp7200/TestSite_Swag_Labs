@@ -9,6 +9,9 @@ public class login {
 
 	public static void main(String[] args) throws Exception {
 	
+	System.out.println();
+	System.out.println("=====================================================");
+	
 	//Funcs funcs = new Funcs();	
 		
 	WebDriver driver = new ChromeDriver();
@@ -17,17 +20,33 @@ public class login {
 	
 	//funcs.setUname(driver);
 	
+	//for login into website
 	loginpage login = new loginpage();
 	login.userlogin(driver);
-
+	
+	
+	//Verify add to cart and remove from cart functionality from homepage and product page
 	Cart cart = new Cart();
 	cart.CheckCart2(driver);
 
-	/*sidebar side = new sidebar();
+	
+	/* 
+	//Verify navigation of Cart button
+	cartnav cartnav1 = new cartnav();
+	cartnav1.CartNav(driver);
+	
+	
+	//Verify Sidebar opening and closing
+	sidebar side = new sidebar();
 	side.sidebarfunc(driver);
 	
+	//Verify navigation of each buttons in sidebar
 	SidebarBtnNav sidebarBtnNav = new SidebarBtnNav();
-	sidebarBtnNav.sidebarBtnNavFunc(driver);*/
+	sidebarBtnNav.sidebarBtnNavFunc(driver); */
+
+	//Verify removing product from cart from cart page
+	cartitemremove cartrmv = new cartitemremove();
+	cartrmv.CartItemRemove(driver);
 	
 	Thread.sleep(3000);
 	//driver.close();	
