@@ -8,6 +8,7 @@ public class sidebar {
 	void sidebarfunc(WebDriver driver) throws Exception
 	{
 		WebElement sidebarElement = driver.findElement(By.id("react-burger-menu-btn"));
+		//stored the list of items
 		WebElement itemList = driver.findElement(By.className("bm-item-list"));
 		
 		sidebarElement.click();
